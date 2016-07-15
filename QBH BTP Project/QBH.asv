@@ -1,0 +1,7 @@
+function distance = QBH(source_file, query)
+
+midi = readmidi(source_file);
+ticks = midi.ticks_per_quarter_note;
+Notes = midiInfo(midi);
+[notes_new, len] = generateNotes(Notes, 0);
+time_series = generateTimeSeries(notes_new, 10000
